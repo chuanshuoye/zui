@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<!--统一加载公共js与css文件-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="HandheldFriendly" content="True">
+ <meta name="MobileOptimized" content="320">
+ <meta name="viewport" content="width=320,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="x5-fast-scroller" content="disable">
+ <meta name="apple-mobile-web-app-capable" content="yes">
+ <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+ <link href="../stylesheets/base.css" rel="stylesheet">
+ <link href="../stylesheets/zui.css" rel="stylesheet">
+ <script src="../dist/jquery.min.js"></script>
+ <script src="../dist/sea.js"></script>
+
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	seajs.use("zui/base",function(Base){
+			console.log(Base);
+			console.log(ZUI);
+	})
+</script>
+</body>
+</html>

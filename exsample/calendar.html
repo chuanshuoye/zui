@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<!--统一加载公共js与css文件-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="HandheldFriendly" content="True">
+ <meta name="MobileOptimized" content="320">
+ <meta name="viewport" content="width=320,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="x5-fast-scroller" content="disable">
+ <meta name="apple-mobile-web-app-capable" content="yes">
+ <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+ <link href="../stylesheets/base.css" rel="stylesheet">
+ <link href="../stylesheets/zui.css" rel="stylesheet">
+ <script src="../javascript/jquery.min.js"></script>
+ <script src="../javascript/sea.js"></script>
+
+</head>
+<body>
+<div class="list-group form-list-group  mt-15">
+  <div class="row  list-group-item ">
+    <label class="form-label input-label col-five-1">Calendar</label>
+     <input type="text" class="form-control col-five-4 input-border" id="startDate1" />
+  </div>
+   <div class="row  list-group-item ">
+    <label class="form-label input-label col-five-1">DateCalendar</label>
+     <input type="text" class="form-control col-five-4 input-border" id="startDate2" />
+  </div>
+   <div class="row  list-group-item ">
+    <label class="form-label input-label col-five-1">DatePicker</label>
+     <input type="text" class="form-control col-five-4 input-border" id="startDate3" />
+  </div>
+</div>
+<script type="text/javascript">
+	
+	seajs.use("zui/calendar",function(Calendar){
+			//console.log(Base);
+			console.log(ZUI);
+			/*var calendar1=new Calendar.Calendar({
+						//disabledDates:['2013/10/10','2013/11/10'],
+						//years:[1800,2020],
+						//minDate:"2015-03-09",
+						//maxDate:"2017-04-30",
+						beforeSelectDate:function(date){
+							 console.log(date);
+							 return false;
+						},
+						render:"#startDate1"
+			});*/
+			var calendar2=new Calendar.DateCalendar({
+						render:"#startDate2"
+			});
+			//var calendar3=new Calendar.DatePicker({
+			//			render:"#startDate3"
+			//});
+	})
+</script>
+</body>
+</html>

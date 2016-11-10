@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<!--统一加载公共js与css文件-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="HandheldFriendly" content="True">
+ <meta name="MobileOptimized" content="320">
+ <meta name="viewport" content="width=320,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="x5-fast-scroller" content="disable">
+ <meta name="apple-mobile-web-app-capable" content="yes">
+ <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+ <link href="../stylesheets/base.css" rel="stylesheet">
+ <link href="../stylesheets/zui.css" rel="stylesheet">
+ <script src="../dist/jquery.min.js"></script>
+ <script src="../dist/sea.js"></script>
+ 
+
+</head>
+<body >
+
+<form id="form1">
+<div class="list-group form-list-group  mt-15">
+  <div class="row  list-group-item ">
+    <label class="form-label input-label col-five-1">手机号</label>
+     <input type="text" class="form-control col-five-4 input-border" name="phoneNo" data-rules="{required:true,mobile:true}" data-messages="{required:'手机号不能为空!'}">
+  </div>
+</div>
+</form>
+<div class="plr-15" style="margin-top:1200px">
+ <button  type="button" id="btn" class="z-btn-block btn-green ">确认购买</button>
+</div>
+ <script>
+   seajs.use(["zui/form","zui/dialog"],function(zForm,Dialog){  
+         var form1=new zForm.Form({
+              srcNode:"#form1",
+              validateFunc:function(field){
+                Dialog.Alert({
+                   msg:"<p style='text-align:center;color:red;'>"+field['validateMsg']+"</p>"
+                })
+              }
+          });
+
+
+         function checkRule(){
+
+         	 if(!form1.isValid("phoneNo"))
+         		return false;
+           if(!form1.isValid("phoneNo2"))
+	         	return false;
+           if(!form1.isValid("phoneNo3"))
+	          	return false;
+	         return true;
+         }
+
+          $("#btn").on("click",function(){
+
+             if(form1.valid()){
+                 form1.ajaxSubmit({
+                    url:"../data/data.json",
+                    success:function(){
+
+                    },
+                    error:function(){
+
+                   }
+                 });
+             }
+
+          });
+        
+    
+    		
+   });
+
+
+  </script>
+</body>
+</html>

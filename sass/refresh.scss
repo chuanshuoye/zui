@@ -1,0 +1,49 @@
+.ui-refresh .ui-refresh-down .ui-refresh-icon,.ui-refresh .ui-refresh-up .ui-refresh-icon
+	{
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	vertical-align: middle;
+	background: url(./images/r-flip.png) no-repeat;
+	-webkit-background-size: 25px 25px;
+	-webkit-transition-property: -webkit-transform;
+	-webkit-transition-duration: 400ms;
+	-webkit-transition-timing-function: ease-in-out
+}
+
+.ui-refresh .ui-refresh-down .ui-refresh-icon,.ui-refresh .ui-refresh-up .ui-refresh-flip
+	{
+	-webkit-transform: rotate(180deg) translateZ(0)
+}
+
+.ui-refresh .ui-refresh-down .ui-refresh-flip {
+	-webkit-transform: rotate(0deg) translateZ(0)
+}
+
+.ui-refresh .ui-refresh-down .ui-loading,.ui-refresh .ui-refresh-up .ui-loading
+	{
+	-webkit-transition-duration: 0ms
+}
+
+
+.ui-refresh-action {
+      text-align: center;
+      height: 45px;
+      line-height: 45px;
+      color: #999;
+}
+
+.ui-refresh-action .ui-loading {
+  display: none;
+}
+.ui-refresh-action.loading {
+	text-align: center;
+}
+.ui-refresh-action.loading .ui-loading {
+  	display: inline-block;
+  	vertical-align: middle;
+}
+
+.ui-refresh-action.loading  .ui-refresh-down-label,.ui-refresh-action.loading  .ui-refresh-up-label{
+  display: none;
+}

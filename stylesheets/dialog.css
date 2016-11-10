@@ -1,0 +1,30 @@
+.ui-dialog { overflow: hidden; margin: 0 auto; z-index: 1002; position: absolute; left: 0; top: -10000px; display: none; /* background-color: #fff; */ -webkit-tap-highlight-color: rgba(255, 255, 255, 0); -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6); -webkit-border-radius: 3px; -webkit-transform: translateZ(0); -webkit-user-select: none; -webkit-user-drag: none; }
+
+.ui-mask { position: absolute; top: 0; left: 0; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; display: none; z-index: 1001; min-height: 100%; -webkit-transform: translateZ(0); -webkit-tap-highlight-color: rgba(255, 255, 255, 0); -webkit-user-select: none; -webkit-user-drag: none; }
+
+.ui-mask.dialog-mask { background-color: #111; }
+
+.ui-dialog .ui-dialog-title { position: relative; }
+.ui-dialog .ui-dialog-close { position: absolute; top: 5px; right: 5px; }
+.ui-dialog .ui-dialog-container { position: relative; }
+.ui-dialog .ui-dialog-title { padding: 10px 0; font-size: 16px; text-align: center; font-weight: 700; -webkit-border-radius: 3px 3px 0 0; }
+.ui-dialog .ui-dialog-close { cursor: pointer; border-width: 0; display: inline-block; padding: 7px 9px; margin: 2px; line-height: 1; -webkit-border-radius: 3px; }
+.ui-dialog .ui-dialog-close-hover { background-color: rgba(255, 255, 255, 0.4); }
+.ui-dialog .ui-dialog-content { padding: 25px; position: relative; text-align: center; }
+.ui-dialog.alert-dialog, .ui-dialog.confirm-dialog { background-color: #fff; }
+.ui-dialog.flash-dialog { background-color: rgba(0, 0, 0, 0.7); }
+.ui-dialog.flash-dialog .ui-dialog-content { padding: 10px 15px; color: #fff; }
+.ui-dialog.load-dialog { padding: 15px 0; background-color: #111; color: #fff; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70); opacity: 0.7; }
+.ui-dialog.load-dialog .ui-loading { margin-top: -3px; margin-right: 3px; }
+.ui-dialog.load-dialog .ui-dialog-content { padding: 0; }
+
+.ui-dialog-btns { table-layout: fixed; display: table; border-collapse: collapse; width: 100%; }
+.ui-dialog-btns .ui-btn { padding: 0; width: 100%; display: table-cell; float: none; text-align: center; height: 44px; line-height: 44px; color: #2f6ac6; border: 1px solid #bcbcbc; background-color: #fff; border-bottom: 0 none; cursor: pointer; }
+.ui-dialog-btns .ui-btn:hover, .ui-dialog-btns .ui-btn:focus { background-color: #f1f1f1; }
+.ui-dialog-btns .ui-btn:first-child { -webkit-border-bottom-left-radius: 3px; border-left: 0 none; }
+.ui-dialog-btns .ui-btn:last-child { -webkit-border-bottom-right-radius: 3px; border-right: 0 none; }
+.ui-dialog-btns .ui-btn.ui-state-hover { background-color: #e2e2e2; }
+
+@media all and (min-device-width: 768px) and (max-device-width: 1024px) { .ui-dialog { min-width: 500px; }
+  .ui-dialog .ui-dialog-title { min-height: 1.1em; } }
+.ui-loading { width: 20px; height: 20px; text-indent: -10000px; background: url(./images/ui-loading.png) 0 0/20px 20px no-repeat; vertical-align: middle; display: inline-block; -webkit-background-size: 20px 20px; -webkit-animation-name: ui-loading-anim; -webkit-animation-duration: 1s; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: step-start; }
